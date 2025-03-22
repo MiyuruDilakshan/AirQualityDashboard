@@ -1,0 +1,36 @@
+﻿@model AirQualityDashboard.Models.SimulationSetting
+@{
+    ViewData["Title"] = "Simulation Settings";
+    Layout = "_Layout";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Simulation Settings</h2>
+    <div class="card shadow">
+        <div class="card-body">
+            <form asp-action="SimulationSettings" method="post">
+                <div class="mb-3">
+                    <div class="form-check form-switch">
+                        <input asp-for="IsRunning" class="form-check-input" type="checkbox" role="switch">
+                        <label asp-for="IsRunning" class="form-check-label">Simulation Running</label>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="BaselineAQI" class="form-label">Baseline AQI</label>
+                    <input asp-for="BaselineAQI" class="form-control" type="number" min="0" max="500">
+                    <small class="form-text text-muted">Base AQI value for simulation</small>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Variation" class="form-label">Variation Range</label>
+                    <input asp-for="Variation" class="form-control" type="number" min="0" max="100">
+                    <small class="form-text text-muted">Maximum variation from baseline</small>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="FrequencyMinutes" class="form-label">Update Frequency (minutes)</label>
+                    <input asp-for="FrequencyMinutes" class="form-control" type="number" min="1" max="60">
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Save Settings</button>
+            </form>
+        </div>
+    </div>
+</div>

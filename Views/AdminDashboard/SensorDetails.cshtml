@@ -1,0 +1,25 @@
+﻿<!-- Sensor Details View (SensorDetails.cshtml) -->
+@model AirQualityDashboard.Models.Sensor
+
+<h2>Edit Sensor</h2>
+<form asp-action="EditSensor">
+    <div class="form-group">
+        <label for="SensorIdentifier">Sensor ID</label>
+        <input type="text" class="form-control" id="SensorIdentifier" name="SensorIdentifier" value="@Model.SensorIdentifier" />
+    </div>
+    <div class="form-group">
+        <label for="Latitude">Latitude</label>
+        <input type="text" class="form-control" id="Latitude" name="Latitude" value="@Model.Latitude" />
+    </div>
+    <div class="form-group">
+        <label for="Longitude">Longitude</label>
+        <input type="text" class="form-control" id="Longitude" name="Longitude" value="@Model.Longitude" />
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+    </div>
+</form>
+
+<form method="post" asp-action="DeactivateSensor" asp-route-id="@Model.Id">
+    <button type="submit" class="btn btn-danger">Deactivate Sensor</button>
+</form>
