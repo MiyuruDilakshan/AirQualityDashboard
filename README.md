@@ -18,16 +18,6 @@ This web-based **Real-time Air Quality Monitoring Dashboard** was developed as p
 - **Frontend:** HTML, CSS, JavaScript, Bootstrap
 - **Mapping:** Leaflet.js
 
-### 📂 Project Structure
-```
-📁 Real-time-Air-Quality-Dashboard
- ├── 📂 backend                # ASP.NET Core backend logic
- ├── 📂 database               # MySQL scripts and schemas
- ├── 📂 frontend               # HTML, CSS, JavaScript, Bootstrap files
- ├── 📂 docs                   # Documentation and reports
- ├── 📄 README.md              # Project documentation
-```
-
 ### ⚙️ Setup & Installation
 #### 🔹 Prerequisites
 - .NET SDK
